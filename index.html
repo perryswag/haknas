@@ -1,4 +1,4 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html lang="sv-SE">
 
     <head>
@@ -14,156 +14,158 @@
         avel, stall">
         <meta name="author" content="Perry">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    </head>
+    
 
-    <style>
+        <style>
 
-        .script{
-            display: none;
-        }
+            .script{
+                display: none;
+            }
 
-        #hamburgaren {
-            display: none;
-        }
-
-        .overlay {
-            display: none;
-        }
-
-        .hamburgare {
-            display: none;
-        }
-
-        @media only screen and (max-width: 850px) {
-
-            .hamburgare {
-                grid-area: hamburgare;
-                display: block;
-                background-color: white;
-                opacity: 0.75;
-                border-radius: 25px;
-
-                text-align: center;
-                font-family: 'Patrick Hand',cursive; 
-                color: rgb(124,60,28);
-                cursor: pointer;
-                font-size: 40px;
+            #hamburgaren {
+                display: none;
             }
 
             .overlay {
-                grid-area: meny2;
-                height: 100%;
-                width: 100%;
-                display: none;
-                position: fixed;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                background-color: rgb(124,60,28, 0.9);       
-            }
-
-            .overlay-content {
-                position: relative;
-                top: 25%;
-                width: 100%;
-                text-align: center;
-                margin-top: 30px;
-            }
-
-            .overlay a {
-                font-family: 'Patrick Hand',cursive;    
-                padding: 8px;
-                text-decoration: none;
-                font-size: 25px;
-                color: white;
-                display: block;
-                transition: 0.3s;
-            }
-
-            .overlay a:hover, .overlay a:focus {
-                color: black;
-            }
-
-            .overlay .closebtn {
-                position: absolute;
-                top: 20px;
-                right: 45px;
-            }
-                 
-            .ikon {
                 display: none;
             }
 
-            .meny {
+            .hamburgare {
                 display: none;
             }
 
-            .header {
-                position: static;
-                z-index: 0;
+            @media only screen and (max-width: 850px) {
+
+                .hamburgare {
+                    grid-area: hamburgare;
+                    display: block;
+                    background-color: white;
+                    opacity: 0.75;
+                    border-radius: 25px;
+
+                    text-align: center;
+                    font-family: 'Patrick Hand',cursive; 
+                    color: rgb(124,60,28);
+                    cursor: pointer;
+                    font-size: 40px;
+                }
+
+                .overlay {
+                    grid-area: meny2;
+                    height: 100%;
+                    width: 100%;
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    background-color: rgb(124,60,28, 0.9);       
+                }
+
+                .overlay-content {
+                    position: relative;
+                    top: 25%;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+
+                .overlay a {
+                    font-family: 'Patrick Hand',cursive;    
+                    padding: 8px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: white;
+                    display: block;
+                    transition: 0.3s;
+                }
+
+                .overlay a:hover, .overlay a:focus {
+                    color: black;
+                }
+
+                .overlay .closebtn {
+                    position: absolute;
+                    top: 20px;
+                    right: 45px;
+                }
+                    
+                .ikon {
+                    display: none;
+                }
+
+                .meny {
+                    display: none;
+                }
+
+                .header {
+                    position: static;
+                    z-index: 0;
+                }
+
+                .header > h1 {
+                    font-size: 50px;
+                }
+
+                .header > h2 {
+                    font-size: 30px;
+                }
+
+                .big-container {
+                    grid-template-areas:           
+                    'headern'
+                    'hamburgare' 
+                    'meny2'
+                    'grid-container';
+                }
+
+                .grid-container {
+                    grid-template-areas:
+                    'text'
+                    'bild'
+                    'text2'
+                    'bild2'
+                    'text3'
+                    'bild3'
+                    'knapp';
+                }
+
+                h3 {
+                    font-size: 13px;
+                }
+
+                h4 {
+                    font-size: 12px;
+                }
+
+                a {
+                    font-size: 12px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .bildMaria {
+                    width: 90%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .button {
+                    font-size: 20px;
+                }
+
+                ul {
+                    list-style: none;
+                }
+
             }
 
-            .header > h1 {
-                font-size: 50px;
-            }
+        </style>
 
-            .header > h2 {
-                font-size: 30px;
-            }
-
-            .big-container {
-                grid-template-areas:           
-                'headern'
-                'hamburgare' 
-                'meny2'
-                'grid-container';
-            }
-
-            .grid-container {
-                grid-template-areas:
-                'text'
-                'bild'
-                'text2'
-                'bild2'
-                'text3'
-                'bild3'
-                'knapp';
-            }
-
-            h3 {
-                font-size: 13px;
-            }
-
-            h4 {
-                font-size: 12px;
-            }
-
-            a {
-                font-size: 12px;
-            }
-
-            p {
-                font-size: 12px;
-            }
-
-            .bildMaria {
-                width: 90%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .button {
-                font-size: 20px;
-            }
-
-            ul {
-                list-style: none;
-            }
-
-        }
-
-    </style>
+    </head>
 
     <body>
 
@@ -179,7 +181,6 @@
                             <li><a href="./hitta_hit.html">HITTA HIT</a></li>
                             <li><a href="#lättläst">LÄTTLÄST</a></li>
                             <li><a href="#international">INTERNATIONAL</a></li>
-                            <br>
                             <li> <p style="color: white; font-size: 18px;"> Telefon: +46 70 255 07 88 </p> </li>                                
                         </ul> 
             </div>
