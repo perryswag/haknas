@@ -416,17 +416,7 @@ img.bildTur2 {
 .tabell {
     grid-area: pris;
     font-family: 'Merriweather', serif; 
-    
-
-     
-  
 }
-
-/* .pris {
-    list-style-type: none;
-    border: 3px solid rgb(140,98,49); 
-    border-style: dotted;   
-} */
 
 table {
     border: 3px solid rgb(124,60,28);
@@ -458,4 +448,10 @@ td {
 
 tr:nth-child(even) {
     background-color: rgb(140,98,49, 0.8); 
+}
+
+/*Hitta hit*/
+
+iframe {
+    border: 0px;
 }
