@@ -4,100 +4,102 @@
         <title>Aktiviteter</title>
         <link rel ="stylesheet" href="styles2.css">
         <meta charset="utf-8">
-    </head>
+    
 
-    <style>
+        <style>
 
-        .grid-container {               
-            grid-template-areas:
-            'bildTur textTur textTur'  
-            'textTur2 textTur2 bildTur2'
-            'pris pris pris'
-            'knapp knapp knapp' ;              
-        }
+            .grid-container {               
+                grid-template-areas:
+                'bildTur textTur textTur'  
+                'textTur2 textTur2 bildTur2'
+                'pris pris pris'
+                'knapp knapp knapp' ;              
+            }
 
-        .bildTur {
-            grid-area: bildTur;
-        }
+            .bildTur {
+                grid-area: bildTur;
+            }
 
-        .textTur {
-            grid-area: textTur;
-            box-sizing: border-box;
-            text-align: center;
-            width: fit-content;
-            height: fit-content;
-            align-self: center;
-        }
+            .textTur {
+                grid-area: textTur;
+                box-sizing: border-box;
+                text-align: center;
+                width: fit-content;
+                height: fit-content;
+                align-self: center;
+            }
 
-        .bildTur2 {
-            grid-area: bildTur2;   
-            margin-right: 50px;  
-        }
+            .bildTur2 {
+                grid-area: bildTur2;   
+                margin-right: 50px;  
+            }
 
-        .textTur2 {
-            grid-area: textTur2;
-            box-sizing: border-box;
-            text-align: center;
+            .textTur2 {
+                grid-area: textTur2;
+                box-sizing: border-box;
+                text-align: center;
+            
+                align-self: center;          
+            }
+
+            .knapp {
+                grid-area: knapp;
+            }
+
+            h4 {
+                text-align: center;
+                font-size: 18px;
+            }
+
+            @media print {
+
+                .ikon {
+                    display: none;
+                }
+
+                .meny{
+                    display: none;
+                }
+
+                .big-container {
+                    grid-template-areas: 
+                    'headern '
+                    'grid-container'    
+                    ;
+                }
+
+                .header > h1, h2 {
+                    color: rgb(124,60,28);
+                }
+
+                .grid-container {
+                    grid-template-areas: 
+                    'textTur textTur2'
+                    'bildTur bildTur2'
+                    'pris pris'
+                    'knapp knapp'
+                    ;
+                }
+
+                .button {
+                    display: none;
+                }
+
+                .bokningsKnapp {
+                    display: none;
+                }
+
+                body {
+                    background-color: white;
+                    /* grid-template-areas: 
+                    textTur; */
+
+                }        
+            }
+
+        </style>
         
-            align-self: center;          
-        }
-
-        .knapp {
-            grid-area: knapp;
-        }
-
-        h4 {
-            text-align: center;
-            font-size: 18px;
-        }
-
-        @media print {
-
-            .ikon {
-                display: none;
-            }
-
-            .meny{
-                display: none;
-            }
-
-            .big-container {
-                grid-template-areas: 
-                'headern '
-                'grid-container'    
-                ;
-            }
-
-            .header > h1, h2 {
-                color: rgb(124,60,28);
-            }
-
-            .grid-container {
-                grid-template-areas: 
-                'textTur textTur2'
-                'bildTur bildTur2'
-                'pris pris'
-                'knapp knapp'
-                ;
-            }
-
-            .button {
-                display: none;
-            }
-
-            .bokningsKnapp {
-                display: none;
-            }
-
-            body {
-                background-color: white;
-                /* grid-template-areas: 
-                textTur; */
-
-            }        
-        }
-
-    </style>
+    </head>
 
     <body>
 

@@ -4,46 +4,46 @@
         <meta charset="utf-8">
         <title>Om Håknäs Hästbruk</title>
         <link rel ="stylesheet" href="styles2.css">
-       
+
+        <style>
+
+            .grid-container {
+                grid-area: grid-container;
+                top: 200;
+                display: grid;
+                height: fit-content;
+                
+                grid-template-areas:
+                'bildMaria textMaria textMaria'
+                'textHorse textHorse  textHorse'  
+                'bildLo  bildHelge  bildHorse1'
+                'sluttext sluttext sluttext';  
+                
+                background: rgb(255, 255, 255, 0.75);
+                border-radius: 25px;
+                box-sizing: border-box;
+            }
+
+            .bildMaria {
+                grid-area: bildMaria;
+            }
+
+            .textMaria {
+                grid-area: textMaria;
+            }
+
+            .textHorse{
+                grid-area: textHorse; 
+            }
+
+            .sluttext {
+                grid-area:sluttext;
+                text-align: center; 
+            }
+
+        </style>
+
     </head>
-
-    <style>
-
-    .grid-container {
-        grid-area: grid-container;
-        top: 200;
-        display: grid;
-        height: fit-content;
-         
-        grid-template-areas:
-        'bildMaria textMaria textMaria'
-        'textHorse textHorse  textHorse'  
-        'bildLo  bildHelge  bildHorse1'
-        'sluttext sluttext sluttext';  
-        
-        background: rgb(255, 255, 255, 0.75);
-        border-radius: 25px;
-        box-sizing: border-box;
-    }
-
-    .bildMaria {
-        grid-area: bildMaria;
-    }
-
-    .textMaria {
-        grid-area: textMaria;
-    }
-
-    .textHorse{
-        grid-area: textHorse; 
-    }
-
-    .sluttext {
-        grid-area:sluttext;
-        text-align: center; 
-    }
-
-    </style>
 
     <body>
 
