@@ -1,0 +1,320 @@
+<DOCTYPE! html>
+<html lang="sv-SE">
+
+    <head>
+        <title>Håknäs Hästbruk</title>
+        <link rel ="stylesheet" href="styles2.css">
+        <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta name="description" content="Håknäs Hästbruk i Vännäs ordnar turridning
+        i den norrländska naturen">
+        <meta name="keywords" content="håknäs, hästbruk, vännäs, turridning, 
+        ridlektioner, festkörning, brukskörning, 
+        avel, stall">
+        <meta name="author" content="Perry">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+
+    <style>
+
+        .script{
+            display: none;
+        }
+
+        #hamburgaren {
+            display: none;
+        }
+
+        .overlay {
+            display: none;
+        }
+
+        .hamburgare {
+            display: none;
+        }
+
+        @media only screen and (max-width: 850px) {
+
+            .hamburgare {
+                grid-area: hamburgare;
+                display: block;
+                background-color: white;
+                opacity: 0.75;
+                border-radius: 25px;
+
+                text-align: center;
+                font-family: 'Patrick Hand',cursive; 
+                color: rgb(124,60,28);
+                cursor: pointer;
+                font-size: 40px;
+            }
+
+            .overlay {
+                grid-area: meny2;
+                height: 100%;
+                width: 100%;
+                display: none;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(124,60,28, 0.9);       
+            }
+
+            .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .overlay a {
+                font-family: 'Patrick Hand',cursive;    
+                padding: 8px;
+                text-decoration: none;
+                font-size: 25px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .overlay a:hover, .overlay a:focus {
+                color: black;
+            }
+
+            .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+            }
+                 
+            .ikon {
+                display: none;
+            }
+
+            .meny {
+                display: none;
+            }
+
+            .header {
+                position: static;
+                z-index: 0;
+            }
+
+            .header > h1 {
+                font-size: 50px;
+            }
+
+            .header > h2 {
+                font-size: 30px;
+            }
+
+            .big-container {
+                grid-template-areas:           
+                'headern'
+                'hamburgare' 
+                'meny2'
+                'grid-container';
+            }
+
+            .grid-container {
+                grid-template-areas:
+                'text'
+                'bild'
+                'text2'
+                'bild2'
+                'text3'
+                'bild3'
+                'knapp';
+            }
+
+            h3 {
+                font-size: 13px;
+            }
+
+            h4 {
+                font-size: 12px;
+            }
+
+            a {
+                font-size: 12px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .bildMaria {
+                width: 90%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .button {
+                font-size: 20px;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+        }
+
+    </style>
+
+    <body>
+
+        <div id="hamburgaren" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <ul>
+                            <li><a href="./håknäs2.html">START</a></li>
+                            <li><a href="./om.html">OM</a></li>
+                            <li><a href="./kontakt.html">KONTAKT</a></li>
+                            <li><a href="./aktiviteter.html">AKTIVITETER</a></li>
+                            <li><a href="#avel">AVEL</a></li>
+                            <li><a href="./hitta_hit.html">HITTA HIT</a></li>
+                            <li><a href="#lättläst">LÄTTLÄST</a></li>
+                            <li><a href="#international">INTERNATIONAL</a></li>
+                            <br>
+                            <li> <p style="color: white; font-size: 18px;"> Telefon: +46 70 255 07 88 </p> </li>                                
+                        </ul> 
+            </div>
+          </div>
+
+        <div class = "big-container">
+
+            <div class="header">            
+                <h1>HÅKNÄS HÄSTBRUK </h1>                   
+                <h2>-Hästäventyr för hela familjen!!!</h2>                   
+            </div>
+
+            <span class="hamburgare" onclick="openNav()">&#9776; MENY</span>
+
+            <script>
+            function openNav() {
+            document.getElementById("hamburgaren").style.display = "block";
+            }
+
+            function closeNav() {
+            document.getElementById("hamburgaren").style.display = "none";
+            }
+            </script>
+
+            <div class="meny">
+            
+                <ul>
+                    <li><a href="./index.html">START</a></li>
+                    <li><a href="./om.html">OM</a></li>
+                    <li><a href="./kontakt.html">KONTAKT</a></li>
+                    <li><a href="./aktiviteter.html">AKTIVITETER</a></li>
+                    <li><a href="#avel">AVEL</a></li>
+                    <li><a href="./hitta_hit.html">HITTA HIT</a></li>
+                    <li><a href="#lättläst">LÄTTLÄST</a></li>
+                    <li><a href="#international">INTERNATIONAL</a></li>               
+                    
+                </ul>          
+            </div>
+
+            <div class="ikon"> 
+                <img class = "horsie" src="håknäs/hästikon.png" alt="Ikon föreställande en tecknad häst">               
+            </div>   
+
+            <div class="grid-container">
+                   
+                <div class="bildMaria">
+                    <img class="bildMaria" src="håknäs/familj.jpeg" alt="En stor häst, ett föl och två barn" >  
+                </div>
+
+                <div class = "textMaria"> 
+                                               
+                        <h3> Välkommen till Håknäs hästbruk!  </h3>
+                        <p> Håknäs Hästbruk ordnar turridning i den norrländska naturen.
+                            Vi rider efter skogsvägar och stigar. Ridningen sker på nordsvenska
+                            brukshästar, vilka passar till både vana och ovana ryttare.
+                            Turridningen hålls året om.  
+                            Vår och höst hålls ridlektioner på nordsvenskar där vi 
+                            blandar uteritter med träning på vår belysta rid- och körbana 
+                            när mörkret faller på. Vi håller även helgkurser: 
+                            introduktionskurser i körning, skogskörning, brukskörning, 
+                            dressyr, parkörning och inkörning.
+                        </p>
+                        <h4>
+                            Är du intresserad av att veta mer om 
+                            den spännande historien bakom bruket?
+                            <br>
+                            <a href="./om.html"> Följ denna länk om du törs!! </a>
+                        </h4>
+                                      
+                </div>                 
+ 
+                <div class="textAktiviteter">
+                                             
+                        <h3> Aktiviteter  </h3>
+                        <p> Bjud medarbetarna på en oförglömlig upplevelse 
+                            tillsammans med våra nordsvenska hästar i de norrländska
+                            skogarna. Turen kombineras med vagn/släde och några ridhästar.
+                            Alla som vill kan prova på att färdas till häst. 
+                            Gruppturer passar för grupper mellan 10-25 personer.
+                            Alla turer sker på stabila och trygga nordsvenska brukshästar, som passar till
+                            ryttare på alla nivåer.
+                        </p>    
+                            
+                            <h4> Sugen på en vintertur i släde med Barnabas?
+                                <br>
+                                <a href="./aktiviteter.html"> 
+                                    Läs mer om våra aktiviteter här! </a>
+                            </h4>
+                        
+                 
+                </div> 
+                
+                <div class="bildAktivitet">
+                    <img class="bildMaria" src="håknäs/vintertur2.jpeg" alt="Hästar på vintertur">
+                </div>
+
+                
+                <div class="textHorse">
+                                   
+                        <h3> Hästarna  </h3>
+                        <p>
+                            Hästarna är många på gården. Lo, Helge, Barnabas, Jeff, Melgot,
+                            Måns, Lillemor, Stitch, Tallulah-Phoebe, Flisan, Greger och Mozart!
+                            Sen ska vi ju självklart inte glömma ponny-gänget: 
+                            Miha, hamburgarenas, Annicha, Anncha, Moah, Ricky, Ritva, Lennie, Ortega, Lukky Starr,
+                            Eleoniore, Samanta, Kenneth, Zebben, Ronny, Pirogen, Billy, Bill, Åkhe och Jeff Jr.
+                            Olika hästar passar olika personer och här på Bruket finns någon för alla!
+                            Behandla hästarna som du själv vill bli behandlad.
+                        </p> 
+
+                           <h4> Är Jeff och Jeff Jr ens släkt?  
+                            <br>                        
+                             <a href="./om.html"> 
+                                Ta reda på mer om hästarna här! </a>
+                            </h4>
+                            
+                        
+                </div>       
+
+                <div class="bildHorse">
+                    <img class="bildMaria" src="håknäs/lo2.jpeg" alt="Hästen Lo">
+                    <!-- kan använda samma bildklass och textklass här! städa senare!! -->
+                </div>
+
+                <div class="bokningsKnapp"> 
+                    <h5> Är du intresserad av att göra något på bruket? Sugen på att surra? </h5> 
+                    <a href="./kontakt.html" class = "button"> 
+                        KONTAKTA OSS!
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+   
+</html>

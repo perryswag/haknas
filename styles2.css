@@ -1,0 +1,461 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap&family=Merriweather:wght@400;700');
+
+
+body{
+    background-image: url(håknäs/bakgrund.jpeg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.big-container {
+    display: grid;
+    grid-template-areas:
+    
+    'ikon headern headern'
+    'menyn grid-container grid-container'
+    'menyn grid-container grid-container' ;
+    gap: 20px;
+    margin-top:0px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+.header{
+    grid-area: headern;
+    background-color: rgb(124,60,28); 
+    position:sticky; 
+    box-sizing: border-box;
+    top: 5px;  
+    z-index: 1;
+    text-align: center;
+    border-radius: 25px;
+}
+
+/*Textstilar*/
+h1 {
+    color: white;
+    font-size:80px;
+    font-family: 'Patrick Hand',cursive;     
+    margin:auto;
+    padding: 1%;
+}
+
+h2 {
+    color: white;
+    font-size: 35px;
+    font-family: 'Patrick Hand',cursive;  
+    margin: auto;
+}
+
+h3 {
+    color: black;
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    margin: auto;     
+} 
+
+h4 {
+    color: black;
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;       
+}  
+
+h5 {
+    color: rgb(124,60,28);
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+h6 {
+    color: black;
+    font-size: 13px;
+    font-family: 'Merriweather', serif; 
+    text-align: center;   
+    font-style: italic;
+    font-weight: lighter;
+    padding: 5px;
+} 
+
+p {
+    color: black;
+    font-size: 15px;
+    font-family: 'Merriweather', serif; 
+    text-align: center;   
+    margin: 5px;
+} 
+
+a {
+    color: rgb(124,60,28);
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+    margin-left: auto;
+    margin-right: auto;       
+}
+
+/* .hamburgarn {
+    display: none;
+} */
+
+
+
+.meny{
+    grid-area: menyn; 
+    background-color: white;
+    width: 200px;
+    height: fit-content;
+    position:sticky; 
+    top: 200px; 
+    box-sizing: border-box; 
+    overflow:auto;
+    z-index: 1;
+    opacity: 0.75;     
+    border-radius: 25px;
+}
+
+
+.meny ul {
+   list-style-type:none; 
+   margin: 0;
+   padding: 40px;
+   text-align: center;
+   letter-spacing: 1px;
+   line-height: 3;     
+}
+
+/* .meny ul:active {
+    color: green;
+    text-decoration: underline;
+} */
+
+.meny a {
+    text-decoration: none;
+    align-items: center; 
+    color: black;  
+    font-family: 'Patrick Hand',cursive;
+    font-size: 20px;  
+     
+} 
+
+.meny a:active {
+    color: green;
+    text-decoration: underline;
+}
+
+.meny a:hover {
+    color: rgb(124,60,28) ;
+}
+
+
+.ikon {
+    grid-area: ikon;
+    /* padding:10px; */
+    width: 200px; 
+    height: 200px;
+    /* få hästen att hamna precis i mitten ovanför! senare */
+    position:sticky;
+    top: 0;
+    /* height: fit-content; */
+    box-sizing: border-box;    
+}
+
+img.horsie {
+    width: 175px;  /*behöver ändra storlek sen för att få till med griden?*/
+    height: 175px;
+    object-fit: cover;
+    object-position: center;
+    object-position: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Innehållet i lilla containern*/
+
+.grid-container {
+    grid-area: grid-container;
+    top: 200;
+    display: grid;
+    height: fit-content;
+
+    grid-template-areas:
+    'bild bild  text text  text text'
+    'text2 text2 text2 text2  bild2 bild2' 
+    'bild3 bild3 text3 text3 text3 text3'
+    'knapp knapp knapp knapp knapp knapp ';
+ 
+    background: rgb(255, 255, 255, 0.75);
+    border-radius: 25px;
+    box-sizing: border-box;
+   
+}
+
+.grid-container > div {
+    box-sizing: border-box;
+    margin: 5%;
+    display: inline-block;   
+ }
+
+ /*Välkommen till gården*/
+
+.bildMaria {
+    grid-area: bild;
+    width:100%; 
+}
+
+img.bildMaria {
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+.textMaria {
+    grid-area: text;
+    box-sizing: border-box;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+
+/*Aktiviteter*/
+
+.textAktiviteter{
+    grid-area: text2;  
+    box-sizing: border-box; 
+    text-align: center;
+    align-self: center;
+}
+
+.bildAktivitet {
+    grid-area: bild2;
+    
+}
+
+img.bildAktivitet {
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+
+/*Hästarna*/
+.textHorse{
+    grid-area: text3; 
+    box-sizing: border-box; 
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+
+.bildHorse {
+    grid-area: bild3;
+    width:fit-content;
+    height: fit-content;
+    
+}
+
+img.bildHorse {
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+.bokningsKnapp { 
+    grid-area: knapp;   
+    align-self: center;    
+    height: fit-content;
+    text-align: center;  
+}
+
+.button {
+    font-family: 'Patrick Hand',cursive;
+    box-shadow: 10px;
+    font-size: 40px;
+    padding: 2% 7% 2% 7%;  
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgb(124,60,28); 
+    color: white;
+    display: block;
+    /* margin-left: auto;
+    margin-right: auto; */
+    text-align: center;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+/* Om */
+
+.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 25px;
+    text-align: center;
+}
+
+.bildHelge {
+    grid-area: bildHorse;
+    margin: 15px;
+    width:fit-content;
+    height: fit-content;
+    border: 2px solid black;
+}
+
+img.bildHelge {
+    clip: rect(50px 350px 350px 70px);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden; 
+} 
+
+.bildLo {
+    grid-area: bildLo;
+    margin: 15px;
+    width:fit-content;
+    height: fit-content;
+    border: 2px solid black;
+}
+
+img.bildLo {
+    clip: rect(50px 350px 350px 70px);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden; 
+} 
+
+.bildHorse1 {
+    grid-area: bildLo;
+    margin: 15px;
+    width:fit-content;
+    height: fit-content;
+    border: 2px solid black;
+}
+
+img.bildHorse1 {
+    clip: rect(50px 350px 350px 70px);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden; 
+} 
+
+
+
+/* Boka */ 
+
+label {
+    padding: 10px 10px 10px 0px;  
+    display: inline-block;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    resize: vertical;  
+}
+
+input:focus {
+    background-color: rgb(164, 187, 172);
+    border: none;
+}
+
+input[type=submit] {
+    background-color: rgba(119, 49, 33);
+    color:white;
+    font-size: 20px;
+    font-family: 'Patrick Hand',cursive;
+    padding: 12px 20px; 
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: grey;
+}
+
+img.bildBoka {
+    clip: rect(50px 350px 350px 70px);
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    border-style: groove;
+   
+}
+
+img.bildTur {
+    clip: rect(50px 350px 350px 70px);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden; 
+    border-radius: 50%; 
+}
+
+img.bildTur2 {
+    clip: rect(50px 350px 350px 70px);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden; 
+    border-radius: 50%; 
+}
+
+.tabell {
+    grid-area: pris;
+    font-family: 'Merriweather', serif; 
+    
+
+     
+  
+}
+
+/* .pris {
+    list-style-type: none;
+    border: 3px solid rgb(140,98,49); 
+    border-style: dotted;   
+} */
+
+table {
+    border: 3px solid rgb(124,60,28);
+    background-color: white;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 50%;
+    text-align: center;
+    
+}
+
+th {
+    padding: 5px;
+    color: white;
+    /* border-bottom: 1px solid black; */
+    border: 0.6px solid black;
+    background-color: rgb(124,60,28);
+
+}
+
+td {
+    padding: 10px;
+    color: black;
+    /* border-bottom: 1px solid black; */
+    border: 0.6px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(140,98,49, 0.8); 
+}
