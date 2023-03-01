@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jox</title>
+
+        <link rel="stylesheet" href="memory.css">
+    </head>
+
+
+<body>
+
+    <!-- <button type="button"
+    onclick="document.getElementById('datum').innerHTML = Date()">
+    Vill du veta vad klockan är exakt nu????</button>
+
+    <p id="datum"></p>
+
+    <br>
+
+    <img id="hast" src="hastikon.jpeg"style="width:200px;">
+    
+    <button 
+    onclick="document.getElementById('hast').src='tjadern.jpeg'">
+    klicka här för fler fina bilder på hästar! 
+    </button> 
+
+    <button 
+    onclick="document.getElementById('hast').src='hastikon.jpeg'">
+    nej ta bort den!!!!! hjälp</button>
+
+    <br>
+    <br>
+
+    <button onclick="hej('Perry', 'bäst')">jomen så att</button>
+
+    <script>
+        function hej(a,b) {
+            var namn = a;
+            var egenskap = b;
+            alert("kul att du kom fram, "+namn+" är riktigt "+egenskap);          
+        }
+    </script> -->
+
+    <div class = "container">
+        <p>memory</p> 
+
+        <p id="klarat">kan du klara memoryt</p>
+
+        <p id="demo"></p>
+
+        <p id="demo2"></p>
+
+
+        <div id="shuffle">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div>18</div>
+            <div>19</div>
+            <div>20</div>
+            <div>21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+            <div>25</div>
+
+         
+        </div>
+
+
+
+        <div class="cards">
+            <div class="card" animal = "nr1">
+                <img src="hastm1.png">
+            </div>
+            <div class="card" animal = "nr2">
+                <img src="hastm2.png">
+            </div>
+            <div class="card" animal = "nr3">
+                <img src="hastm3.png">
+            </div>
+            <div class="card" animal = "nr4">
+                <img src="hastm4.png">
+            </div>
+            <div class="card" animal = "nr5">
+                <img src="hastm5.png">
+            </div>
+            <div class="card" animal = "nr6">
+                <img src="hastm6.png">
+            </div>
+            <div class="card" animal = "nr7">
+                <img src="hastm7.png">
+            </div>
+
+            <div class="card" animal = "nr1">
+                <img src="hastm1.png">
+            </div>
+            <div class="card" animal = "nr2">
+                <img src="hastm2.png">
+            </div>
+            <div class="card" animal = "nr3">
+                <img src="hastm3.png">
+            </div>
+            <div class="card" animal = "nr4">
+                <img src="hastm4.png">
+            </div>
+            <div class="card" animal = "nr5">
+                <img src="hastm5.png">
+            </div>
+            <div class="card" animal = "nr6">
+                <img src="hastm6.png">
+            </div>
+            <div class="card" animal = "nr7">
+                <img src="hastm7.png">
+            </div>
+
+            <div class="card" animal = "tjader">
+                <img src="tjader1.png">
+            </div>
+
+            <div class="card" animal = "tjader">
+                <img src="tjader2.png">
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    <script>
+        let counter = 0;
+        let firstSelection = "";
+        let secondSelection = "";
+
+        // Counter för hur många elment som blivit checked 
+        // - kan göra om till nåt annat sen, typ for-loop som itererar över alla element
+        let counterPair = 0;
+
+     
+        
+
+        const cards = document.querySelectorAll(".cards .card");
+        cards.forEach((card) => {
+            card.addEventListener("click", () => {
+                card.classList.add("clicked");
+
+                
+
+                if (firstSelection === "tjader" || secondSelection === "tjader" ) {
+                     //gör så att det typ poppar upp eller nåt
+
+                    const hittade = document.querySelectorAll(".checked");
+
+                    for (let i = 0; i < hittade.length; i++) {
+                        hittade[i].classList.remove("checked");
+                        hittade[i].classList.remove("clicked");
+                    }
+
+                    document.getElementById("klarat").innerHTML = "tjäderattack!!!!! börja om från början ";
+                  
+                }
+
+
+
+                //Om inget kort är vänt än, sätt det första valda kortet
+                //till firstSelection
+                if(counter === 0) { //ändra här så att den registrerar första selection direkt? kolla hur den agerar
+                    firstSelection = card.getAttribute("animal");
+                    counter++;
+
+                    // document.getElementById("klarat").innerHTML = "Nu åker vi ";
+                }
+
+                //När andra kortet vänds, sätt det till secondSelection
+                //och nollställ countern
+                else {
+                    secondSelection = card.getAttribute("animal");
+                    counter = 0;
+
+                    // document.getElementById("klarat").innerHTML = "lets go";
+                
+
+                    //Om första kortet är samma som det andra, vänd upp dessa!
+                    //Dvs gör bilden synlig
+                    if(firstSelection === secondSelection) {
+
+                        // Ge beröm
+                        // document.getElementById("klarat").innerHTML = "Shit va snyggt!!! Akta så du inte blir av med dina par... ";
+
+                        //Välj alla kort med det aktuella numret 
+                        const correctCards = document.querySelectorAll(
+                            ".card[animal='" + firstSelection + "']"
+                        );
+
+                        //Ändra till checked från clicked - ändra namn här sen
+                        correctCards[0].classList.add("checked");
+                        correctCards[0].classList.remove("clicked");
+                        correctCards[1].classList.add("checked");
+                        correctCards[1].classList.remove("clicked"); 
+                        
+                        counterPair++;
+                        console.log("Så här många par: " +counterPair);
+                        console.log("Dessa par är hittade: "+correctCards);
+                        
+                        // Objekt med alla element som har klassen "checked"
+                        const hittade = document.querySelectorAll(".checked");
+
+                        // Skriv ut hur många par som är hittade
+                        // document.getElementById("demo").innerHTML = 
+                        // "Så här många par är hittade: " + (counterPair);
+
+                        // for (let i = 0; i < hittade.length; i++) {
+
+                        //     hittadeDjur += (hittade[i].innerHTML);
+
+                        //     document.getElementById("demo2").innerHTML = 
+                        // "och dessa djur är det: " + hittadeDjur;
+                        // } // spara det här till senare!!!
+                        
+                    }
+
+                    // Om det är felmatchat skaka dom korten lite för att visa det är fel
+                    // kan ju göra nån häftigare grej sen om jag vill
+                    
+                    else {
+
+                        // document.getElementById("klarat").innerHTML = "men kom igen ";
+
+                        const incorrectCards = document.querySelectorAll(
+                            ".card.clicked");
+
+                            incorrectCards[0].classList.add("shake");
+                            incorrectCards[1].classList.add("shake");
+
+                            setTimeout(() => {
+                                incorrectCards[0].classList.remove("shake");
+                                incorrectCards[0].classList.remove("clicked");
+                                incorrectCards[1].classList.remove("shake");
+                                incorrectCards[1].classList.remove("clicked");
+                            }, 800);
+                        }
+                }
+                // document.getElementById("demo").innerHTML = text;
+
+                if (hittade.length() === 2) {
+                    document.getElementById("klarat").innerHTML = "Du klarade det!!!";
+
+                }
+
+               
+
+                 // if (hittade.length === 1) {
+
+                    //     document.getElementById("demo").innerHTML = 
+                    //     "0";
+
+                    // }
+
+                    // document.getElementById("demo").innerHTML = 
+                    //     "Så här många par är hittade: " + (hittade.length)/2;
+                    //      //fixa sen så den går ner på 0 direkt men inte stannar där!! ta bort tills vidare
+
+                    // counterPair === 0;
+
+
+                //lägga in vad som händer när memoryt är klart!! och lägga in så det blir ett slumpat bord varje gång? 
+                // lägga in nåt extra med tjädern kanske hahaha, att då är det systemExit eller nåt, då får en börja om från början
+
+                // customizea mer med hur det uppdateras utifrån paren och så
+               
+            
+
+            });
+        });
+
+        $(function () {
+            var parent = $("#shuffle");
+            var divs = parent.children();
+            while (divs.length) {
+                parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+            }
+        });
+
+
+
+  
+
+        
+
+
+    </script>
+
+
+
+    
+</body>
+
+</html>
