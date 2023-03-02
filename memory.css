@@ -1,3 +1,22 @@
+
+#shuffle > div {
+    padding: 10px;
+    float: left;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: gold;
+    color: #fff;
+    border-radius: 4px;
+    margin: 3px;
+}
+#shuffle {
+    max-width: auto;
+    padding: 30px;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +45,6 @@
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s all ease;
-
 }
 
 .card:hover {
@@ -104,19 +122,4 @@
     100% {
         transform: translate(1px, -2px) rotate(-1deg);
     }
-}
-
-
-#shuffle > div {
-    float: left;
-    line-height: 30px;
-    width: 30px;
-    text-align: center;
-    background-color: steelblue;
-    color: #fff;
-    border-radius: 4px;
-    margin: 3px;
-}
-#shuffle {
-    max-width: 360px;
 }
