@@ -2,26 +2,191 @@
 <html lang="sv-SE"> 
 
     <head>
-        <title>shuffle</title>
-        <link rel="stylesheet" href="mem2.css">
+        <title>Memory! 🐴 </title>
+        <link rel ="stylesheet" href="styles2.css">
+        <meta charset="UTF-8">
+
+        <style>
+
+            .header {
+                position: relative;
+            }
+
+
+            .grid-container {
+                width: 1119px;
+                z-index: 1;
+                grid-area: grid-container;
+                /* top: 200px; */
+                display: grid;
+                height: fit-content;
+
+                grid-template-areas:
+                'textMemory '
+                'memory'
+                'textMemory2'
+                ; 
+                
+                border-radius: 25px;
+                box-sizing: border-box;
+
+                background: linear-gradient(to top,
+                 #e9a250,
+                  #7d3c1a
+                );
+            }
+
+            section {   
+                display: grid;
+
+                justify-content: center;
+
+                grid-template-columns: repeat(4, 8rem);
+                grid-template-rows: repeat(4, 8rem);
+                grid-gap: 2rem;
+                perspective: 800px;       
+            }
+
+            .textMemory {
+                grid-area: textMemory;
+                height: fit-content;    
+            }
+
+            .memoryt {
+                grid-area: memory;
+                padding: 10px;
+            }
+
+            .textMemory2 {
+                grid-area: textMemory2;
+                padding-bottom: 10px;
+            }
+
+            .card {
+                box-shadow: (0,0,0,0.7) 0px 5px 15px; /*den här vill inte heller*/
+                position: relative;
+                transform-style: preserve-3d;
+                transition: all 1.5s ease;
+                
+            }    
+                   
+            .face,
+            .back {
+                width: 100%;
+                height: 100%;
+                position: absolute; 
+                pointer-events: none;   /*vad gör den här 29.45, han säger 
+                vi kan adda grejer, adda namnet till kortet?*/
+                border: 2px;
+                border-radius: 10px;
+                border: 4px, white;
+            }
+
+            .back {
+                background: #4e2610;
+                backface-visibility: hidden;
+            }
+
+            .toggleCard {
+                transform: rotateY(180deg);
+            }
+
+            .face {
+                transform: rotateY(-180deg);
+            }
+
+            p {
+                color: white;
+                font-size: 22px;
+                font-family: 'Merriweather',serif;
+                text-align: center;                 
+            }
+
+            h4 {
+                color: white;
+                font-size: 15px;
+                font-family: 'Merriweather', serif;
+                /* font-family: 'Patrick Hand',cursive; */
+                text-align: center;
+            }
+
+            h3 {
+                color: #7d3c1a;
+                font-size: 13px;
+                font-family: 'Patrick Hand',cursive; 
+                opacity: 0.5; 
+                text-align: center;            
+            }
+
+            h5 {
+                color: white;
+                font-size: 40px;
+                font-family: 'Patrick Hand',cursive;  
+                text-align: center;
+                margin: 2px;
+            }
+
+            .grid-container > div {
+                /* background-color: lightblue;  */
+                margin: 0;           
+            }
+
+        </style>
 
     </head>
 
-    <body> 
-
-   
-
-        <p>lives: <span class="playerLivesCount"></span></p>
-
-        <section></section>
-
-        <script src="script.js"> </script>
+    <body>   
         
+        <div class = "big-container">
 
+            <div class="header">             
+                <h1>HÅKNÄS HÄSTBRUK</h1> 
+                <h2>-Hästäventyr för hela familjen!</h2>                  
+            </div>
 
+            <div class="meny">
+                <ul>
+                    <li><a href="./index.html">START</a></li>
+                    <li><a href="./om.html">OM</a></li>
+                    <li><a href="./kontakt.html">KONTAKT</a></li>
+                    <li><a href="./aktiviteter.html">AKTIVITETER</a></li>
+                    <li><a href="./hitta_hit.html">HITTA HIT</a></li>
+                    <li><a href="./shuffle.html">MEMORY</a></li>                                  
+                </ul>                  
+            </div>
 
+            <div class="ikon"> 
+                <img class = "horsie" src="hastikon.jpeg" alt="Ikon föreställande en tecknad häst">               
+            </div>  
+
+            <div class="grid-container">   
+                
+                <div class = "textMemory" > 
+                    <h5> MEMORY </h5>
+                    <h4> 
+                        🚨 Är du redo för Håknäs egna Memory? Varsågod att försöka! 🚨    
+                    </h4>
+
+                   <h4> Antal hittade hingstar: <span class="playerLivesCount"></span> 🐴 </h4>
+
+                </div>
+
+                <div class = "memoryt">         
+                    <section>  </section>
+                </div>  
+
+                <div class = "textMemory2" > 
+                    <h3>
+                        Tips från coachen: Håll dig till hästarna...
+                    </h3>  
+                </div>
+
+            </div>
+
+            <script src="script.js"> </script>
+
+        </div>
         
-
     </body>
 
 </html>
