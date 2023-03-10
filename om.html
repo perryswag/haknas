@@ -41,7 +41,35 @@
                 text-align: center; 
             }
 
+            button {
+                background-color: rgb(124,60,28);
+                padding: 10px;
+                margin: 10px; 
+                color: white;
+                font-family: 'Patrick Hand',cursive;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+
+            .memBild > img {
+            width: 500px;
+            height: 400px;
+            }
+
+            .knappTeaser {
+                padding: 10px;
+            }
+
+            .colorChange {
+                color:rgb(124,60,28);
+            }
+
         </style>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <script src = "jquery.js"> </script>
 
     </head>
 
@@ -131,11 +159,26 @@
 
                 <div class = "sluttext"> 
                     <h4>
-                        Gnägg!! Vill du läsa mer om hästar? Ja det är klart! 
+                        Gnägg!! Vill du läsa mer om hästar som djur? Ja det är klart! 
                         <br>
                         <a href="https://www.arla.se/49a07a/globalassets/old/global/aktuellt/minior/290/hastboken_low.pdf">     
                         Kolla in det här häftet! </a>
                         </h4>
+
+                        <p> Visste du att det finns ett Memory med alla godingar på gården?
+                            <br>
+                            Klicka <a href="./shuffle.html">här</a> för att komma dit direkt eller 
+                            klicka på knappen nedan för en liten teaser.
+                        </p>
+
+                        <div class = "knappTeaser"> 
+                            <button> TEASER </button>
+                        </div>
+
+                        <div class="memBild"> 
+                            <img src="memory.png">
+                        </div>
+
                 </div>
 
             </div>
